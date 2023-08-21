@@ -31,7 +31,8 @@ while (difficulty == "null")
 
         case "cheater":
         difficulty = "Cheater";
-        maxGuesses = int.MaxValue;
+        /* maxGuesses = int.MaxValue; */
+        maxGuesses = 10;
         break;
 
         default:
@@ -60,7 +61,12 @@ while (attemptedGuesses < maxGuesses)
     {
       Console.WriteLine("Too High!");
     }
-          attemptedGuesses ++;
+    attemptedGuesses ++;
+    // adds to the max amount of guesses so it never runs out if you're a cheater
+    if (difficulty == "Cheater")
+    {
+      maxGuesses ++;
+    }
 
     Console.WriteLine($"You guessed wrong LOSER!!! You have left ({maxGuesses - attemptedGuesses})");
   }
