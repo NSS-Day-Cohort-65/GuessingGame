@@ -13,7 +13,16 @@ while (attemptedGuesses < maxGuesses)
   }
   else
   {
-    attemptedGuesses ++;
+    if (guess < secretNumber)
+      {
+        Console.WriteLine("Too Low!");
+      }
+    else if (guess > secretNumber)
+    {
+      Console.WriteLine("Too High!");
+    }
+          attemptedGuesses ++;
+
     Console.WriteLine($"You guessed wrong LOSER!!! You have left ({maxGuesses - attemptedGuesses})");
   }
 }
