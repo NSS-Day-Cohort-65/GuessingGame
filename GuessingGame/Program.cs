@@ -28,6 +28,11 @@ while (difficulty == "null")
         maxGuesses = 4;
         break;
 
+        case "cheater":
+        difficulty = "Cheater";
+        maxGuesses = int.MaxValue;
+        break;
+
         default:
         Console.WriteLine("Please choose an actual difficulty, stupid.");
         break;
