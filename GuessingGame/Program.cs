@@ -1,4 +1,5 @@
-﻿Random r = new Random();
+﻿// See my comments in the PR
+Random r = new Random();
 int secretNumber = r.Next(1,100);
 int maxGuesses = 0;
 int attemptedGuesses = 0;
